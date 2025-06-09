@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{68AB2906-3487-4A9A-9115-315D8E23FE92}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Normalization_MS</RootNamespace>
+    <AssemblyName>Normalization_MS</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>S:\ETL_AP_MS\Normalization_MS\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <ApplicationRevision>98</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>1266D0BDCD9E2A5B784C2E652CF06F1807520081</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Normalization_MS_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.9.9\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="1stMerge\COA\TAnimalFeed.cs" />
+    <Compile Include="1stMerge\COA\TFertilizerMgrInfo.cs" />
+    <Compile Include="1stMerge\COA\TPesticideMgrInfo.cs" />
+    <Compile Include="1stMerge\COA\TPesticideSafety.cs" />
+    <Compile Include="1stMerge\COA\TVeterinaryDrugs.cs" />
+    <Compile Include="1stMerge\ComFacBiz\TBranch.cs" />
+    <Compile Include="1stMerge\ComFacBiz\TBusiness.cs" />
+    <Compile Include="1stMerge\ComFacBiz\TCompany.cs" />
+    <Compile Include="1stMerge\ComFacBiz\TCompanyItem.cs" />
+    <Compile Include="1stMerge\ComFacBiz\TFactory.cs" />
+    <Compile Include="1stMerge\ComFacBiz\TFactoryIllegal.cs" />
+    <Compile Include="1stMerge\ComFacBiz\TFactoryMix.cs" />
+    <Compile Include="1stMerge\ComFacBiz\TLtdPartners.cs" />
+    <Compile Include="1stMerge\ComFacBiz\TLtdPartnership.cs" />
+    <Compile Include="1stMerge\ComFacBiz\TLtdPartnershipItem.cs" />
+    <Compile Include="1stMerge\EPA\TAirPolSource.cs" />
+    <Compile Include="1stMerge\EPA\TClearanceSignify801.cs" />
+    <Compile Include="1stMerge\EPA\TConcernOperation.cs" />
+    <Compile Include="1stMerge\EPA\TConcernOperationR.cs" />
+    <Compile Include="1stMerge\EPA\TConcernPermits.cs" />
+    <Compile Include="1stMerge\EPA\TDrinkingWater.cs" />
+    <Compile Include="1stMerge\EPA\TEmsBasicInfo.cs" />
+    <Compile Include="1stMerge\EPA\TEnvironMdcFlow.cs" />
+    <Compile Include="1stMerge\EPA\TEnvironmentMdc.cs" />
+    <Compile Include="1stMerge\EPA\TExistingChemical.cs" />
+    <Compile Include="1stMerge\EPA\TFoodSafetyInquiry.cs" />
+    <Compile Include="1stMerge\EPA\TFoodSafetyInquiry109.cs" />
+    <Compile Include="1stMerge\EPA\TInspectionHighRisk107.cs" />
+    <Compile Include="1stMerge\EPA\TMatLitterRept.cs" />
+    <Compile Include="1stMerge\EPA\TMonitor.cs" />
+    <Compile Include="1stMerge\EPA\TNewChemical.cs" />
+    <Compile Include="1stMerge\EPA\TPunishment.cs" />
+    <Compile Include="1stMerge\EPA\TRmsBasicInfo.cs" />
+    <Compile Include="1stMerge\EPA\TRmsFlowApply.cs" />
+    <Compile Include="1stMerge\EPA\TRmsOperation.cs" />
+    <Compile Include="1stMerge\EPA\TSgwBasicInfo.cs" />
+    <Compile Include="1stMerge\EPA\TSgwMaterial.cs" />
+    <Compile Include="1stMerge\EPA\TSgwProduct.cs" />
+    <Compile Include="1stMerge\EPA\TSgwRemediationFee.cs" />
+    <Compile Include="1stMerge\EPA\TToxChemiCredential.cs" />
+    <Compile Include="1stMerge\EPA\TToxChemiOperation.cs" />
+    <Compile Include="1stMerge\EPA\TToxChemiRestAmount.cs" />
+    <Compile Include="1stMerge\EPA\TWaterPollutionExam.cs" />
+    <Compile Include="1stMerge\FD\TCommonDangerItemNTPC.cs" />
+    <Compile Include="1stMerge\FD\TCommonDangerItemTPI.cs" />
+    <Compile Include="1stMerge\FD\TCommonDangerItemTXG.cs" />
+    <Compile Include="1stMerge\FD\TCommonDangerItemTYC.cs" />
+    <Compile Include="1stMerge\MOEA\MOEA.cs" />
+    <Compile Include="1stMerge\MOEA\TBizExplosiveInfo.cs" />
+    <Compile Include="1stMerge\MOEA\TChemicalMaterials.cs" />
+    <Compile Include="1stMerge\MOEA\TFactoryDanger.cs" />
+    <Compile Include="1stMerge\MOEA\TFtyDecChemiFlow.cs" />
+    <Compile Include="1stMerge\MOEA\TWhsleChemiInfo.cs" />
+    <Compile Include="1stMerge\MOF\TCigaretAlcoholMgr.cs" />
+    <Compile Include="1stMerge\MOF\TVisaLicense.cs" />
+    <Compile Include="1stMerge\MOHW\TControlledDrugsMgr.cs" />
+    <Compile Include="1stMerge\MOHW\TAutoBorderMgr.cs" />
+    <Compile Include="1stMerge\MOHW\TCosmeticProduct.cs" />
+    <Compile Include="1stMerge\MOHW\TDTraceBook.cs" />
+    <Compile Include="1stMerge\MOHW\TFadenBook.cs" />
+    <Compile Include="1stMerge\MOHW\TFTraceBook.cs" />
+    <Compile Include="1stMerge\MOHW\TMedicinalCertMgrInfo.cs" />
+    <Compile Include="1stMerge\MOHW\TTobaccoIngredient.cs" />
+    <Compile Include="1stMerge\MOI\TFireSafety.cs" />
+    <Compile Include="1stMerge\MOJ\TProcuratorateDrug.cs" />
+    <Compile Include="1stMerge\MOL\TDangerMachine.cs" />
+    <Compile Include="1stMerge\MOL\TNewChemiRegMgr.cs" />
+    <Compile Include="1stMerge\MOL\TPriorityChemicalMgr.cs" />
+    <Compile Include="1stMerge\MOL\TRegulatoryChemical.cs" />
+    <Compile Include="1stMerge\MOST\TOSHTC.cs" />
+    <Compile Include="1stMerge\MOST\TOSHTCBasicInfo.cs" />
+    <Compile Include="1stMerge\MOST\TSIPA.cs" />
+    <Compile Include="1stMerge\MOST\TSIPAOld.cs" />
+    <Compile Include="1stMerge\MOST\TSTSP.cs" />
+    <Compile Include="1stMerge\MOTC\TDangerDeclare.cs" />
+    <Compile Include="1stMerge\MOTC\TDangerPass.cs" />
+    <Compile Include="1stMerge\WATER\TWaterPharmacyKmn.cs" />
+    <Compile Include="1stMerge\WATER\TWaterPharmacyMsu.cs" />
+    <Compile Include="1stMerge\WATER\TWaterPharmacyTpi.cs" />
+    <Compile Include="1stMerge\WATER\TWaterPharmacyTwc.cs" />
+    <Compile Include="2ndMerge\ChemicalData.cs" />
+    <Compile Include="2ndMerge\ChemiComMapping.cs" />
+    <Compile Include="2ndMerge\ChemiCredential.cs" />
+    <Compile Include="2ndMerge\DrugInfo.cs" />
+    <Compile Include="2ndMerge\ComFacBizInfo.cs" />
+    <Compile Include="2ndMerge\EPAClearanceSignify801.cs" />
+    <Compile Include="2ndMerge\EPARmsBasicInfo.cs" />
+    <Compile Include="2ndMerge\EPARmsFlowInfo.cs" />
+    <Compile Include="2ndMerge\EPASgw.cs" />
+    <Compile Include="2ndMerge\Fadenbook.cs" />
+    <Compile Include="2ndMerge\OtherCustomize.cs" />
+    <Compile Include="2ndMerge\ProductData.cs" />
+    <Compile Include="2ndMerge\SupplierCustomerInfo.cs" />
+    <Compile Include="2ndMerge\ToxicFileInfo.cs" />
+    <Compile Include="ChemiDataMatch.cs" />
+    <Compile Include="ComFacBizMatch.cs" />
+    <Compile Include="funcUtil.cs" />
+    <Compile Include="main.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="1stMerge\EPA\TFoodSafetyInquiry108.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
